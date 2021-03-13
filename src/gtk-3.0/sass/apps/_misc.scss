@@ -546,10 +546,6 @@ window#ValaPanel.background {
 
   button.flat.-panel-button,
   button#tasklist-button.toggle.flat,
-  // tasklist-arrow-button.toggle.flat.-panel-flat-button, // xfce tasklist button
-  button.flat.-panel-icon-button {
-    @extend %panelbutton;
-  }
 
   .unpinned button.flat.-panel-icon-button {
     border-radius: 0;

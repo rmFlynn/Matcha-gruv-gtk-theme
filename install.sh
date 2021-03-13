@@ -63,7 +63,7 @@ install() {
   # Install GNOME Shell Theme
   mkdir -p                                                                            ${themedir}/gnome-shell
   cd ${SRC_DIR}/gnome-shell
-  cp -ur pad-osd.css                                                                  ${themedir}/gnome-shell
+  # cp -ur pad-osd.css                                                                  ${themedir}/gnome-shell
   cp -ur icons                                                                        ${themedir}/gnome-shell
   cp -ur gnome-shell${ELSE_DARK}${theme}.css                                          ${themedir}/gnome-shell/gnome-shell.css
   cp -ur common-assets                                                                ${themedir}/gnome-shell/assets
@@ -85,7 +85,6 @@ install() {
   # Install GTK+ 2 Theme
   mkdir -p                                                                            ${themedir}/gtk-2.0
   cd ${SRC_DIR}/gtk-2.0
-  cp -ur {apps.rc,main.rc,panel.rc,xfce-notify.rc}                                    ${themedir}/gtk-2.0
   cp -ur gtkrc${color}${theme}                                                        ${themedir}/gtk-2.0/gtkrc
   cp -ur assets${ELSE_DARK}${theme}                                                   ${themedir}/gtk-2.0/assets
   cp -ur menubar-toolbar${ELSE_DARK}.rc                                               ${themedir}/gtk-2.0/menubar-toolbar.rc
@@ -97,7 +96,6 @@ install() {
   cp -ur gtk${color}${theme}.css                                                      ${themedir}/gtk-3.0/gtk.css
   cp -ur gtk-dark${theme}.css                                                         ${themedir}/gtk-3.0/gtk-dark.css
 
-  cp -ur thumbnail${ELSE_DARK}${theme}.png                                            ${themedir}/gtk-3.0/thumbnail.png
 }
 
 # Backup and install files related to GDM theme
@@ -160,7 +158,6 @@ install_gdm() {
 
     mkdir -p                                                                             "$YARU_GDM_THEME_DIR"/gnome-shell
     mkdir -p                                                                             "$YARU_GDM_THEME_DIR"/gnome-shell/Yaru
-    cp -r "$SRC_DIR"/gnome-shell/{icons,pad-osd.css}                                     "$YARU_GDM_THEME_DIR"/gnome-shell
     cp -r "$SRC_DIR"/gnome-shell/gnome-shell${ELSE_DARK}${theme}.css                     "$YARU_GDM_THEME_DIR"/gnome-shell/gdm3.css
     cp -r "$SRC_DIR"/gnome-shell/gnome-shell${ELSE_DARK}${theme}.css                     "$YARU_GDM_THEME_DIR"/gnome-shell/Yaru/gnome-shell.css
     cp -r "$SRC_DIR"/gnome-shell/common-assets                                           "$YARU_GDM_THEME_DIR"/gnome-shell/assets
