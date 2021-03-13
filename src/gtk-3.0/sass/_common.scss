@@ -2113,9 +2113,9 @@ notebook {
         border-#{$_bpos}: 1px solid $borders_color;
 
         > tabs > tab {
-          padding: 3px 16px 6px 16px;
+          padding: 0 16px 0 16px;
           min-width: 16px;
-          min-height: 16px;
+          min-height: 8px;
           border-radius: 0;
           outline-offset: -4px;
 
@@ -2149,8 +2149,8 @@ notebook {
           }
           @else if $_pos==left {
               &:not(:only-child) {
-                &:first-child { margin-top: 6px; }
-                &:last-child { margin-bottom: 6px; }
+                &:first-child { margin-top: 2px; }
+                &:last-child { margin-bottom: 2px; }
               }
               &:hover {
                 box-shadow: inset -2px 0 gtkalpha($selected_bg_color, 0.6), 1px 0 gtkalpha($selected_bg_color, 0.6);
@@ -2161,8 +2161,8 @@ notebook {
           }
           @else if $_pos==right {
               &:not(:only-child) {
-                &:first-child { margin-top: 6px; }
-                &:last-child { margin-bottom: 6px; }
+                &:first-child { margin-top: 2px; }
+                &:last-child { margin-bottom: 2px; }
               }
               &:hover {
                 box-shadow: inset 2px 0 gtkalpha($selected_bg_color, 0.6), -1px 0 gtkalpha($selected_bg_color, 0.6);

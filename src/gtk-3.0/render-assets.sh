@@ -5,7 +5,7 @@ OPTIPNG="/usr/bin/optipng"
 
 INDEX="assets.txt"
 
-for color in '-aliz' '-azul' '-sea'; do
+for color in '-gruv'; do
   ASSETS_DIR="assets${color}"
   SRC_FILE="assets${color}.svg"
 
@@ -19,7 +19,8 @@ for color in '-aliz' '-azul' '-sea'; do
       echo Rendering $ASSETS_DIR/$i.png
       $INKSCAPE --export-id=$i \
                 --export-id-only \
-                --export-filename=$ASSETS_DIR/$i.png $SRC_FILE >/dev/null
+                --export-png=$ASSETS_DIR/$i.png \
+		$SRC_FILE >/dev/null
       $OPTIPNG -o7 --quiet $ASSETS_DIR/$i.png
     fi
     if [ -f $ASSETS_DIR/$i@2.png ]; then
@@ -30,7 +31,8 @@ for color in '-aliz' '-azul' '-sea'; do
       $INKSCAPE --export-id=$i \
                 --export-dpi=192 \
                 --export-id-only \
-                --export-filename=$ASSETS_DIR/$i@2.png $SRC_FILE >/dev/null
+                --export-png=$ASSETS_DIR/$i@2.png \
+		$SRC_FILE >/dev/null
       $OPTIPNG -o7 --quiet $ASSETS_DIR/$i@2.png
     fi
   done

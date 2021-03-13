@@ -15,7 +15,7 @@ SRC_DIR=${REO_DIR}/src
 
 THEME_NAME=Matcha
 COLOR_VARIANTS=('' '-light' '-dark')
-THEME_VARIANTS=('-aliz' '-azul' '-sea')
+THEME_VARIANTS=('-gruv')
 
 usage() {
   printf "%s\n" "Usage: $0 [OPTIONS...]"
@@ -23,7 +23,7 @@ usage() {
   printf "  %-25s%s\n" "-d, --dest DIR" "Specify theme destination directory (Default: ${DEST_DIR})"
   printf "  %-25s%s\n" "-n, --name NAME" "Specify theme name (Default: ${THEME_NAME})"
   printf "  %-25s%s\n" "-c, --color VARIANTS" "Specify theme color variant(s) [standard|dark] (Default: All variants)"
-  printf "  %-25s%s\n" "-t, --theme VARIANTS" "Specify hue theme variant(s) [aliz|azul|sea] (Default: All variants)"
+  printf "  %-25s%s\n" "-t, --theme VARIANTS" "Specify hue theme variant(s) [gruv] (Default: All variants)"
   printf "  %-25s%s\n" "-g, --gdm" "Install GDM theme, this option need root user authority! please run this with sudo"
   printf "  %-25s%s\n" "-r, --revert" "revert GDM theme, this option need root user authority! please run this with sudo"
   printf "  %-25s%s\n" "-h, --help" "Show this help"
@@ -98,52 +98,6 @@ install() {
   cp -ur gtk-dark${theme}.css                                                         ${themedir}/gtk-3.0/gtk-dark.css
 
   cp -ur thumbnail${ELSE_DARK}${theme}.png                                            ${themedir}/gtk-3.0/thumbnail.png
-
-  # Install CINNAMON Theme
-  mkdir -p                                                                            ${themedir}/cinnamon
-  cd ${SRC_DIR}/cinnamon
-  cp -ur cinnamon${ELSE_DARK}${theme}.css                                             ${themedir}/cinnamon/cinnamon.css
-  cp -ur thumbnail${ELSE_DARK}${theme}.png                                            ${themedir}/cinnamon/thumbnail.png
-
-  cd ${SRC_DIR}/cinnamon/assets${theme}
-  cp -ur common-assets                                                                ${themedir}/cinnamon
-  cp -ur assets${ELSE_DARK}                                                           ${themedir}/cinnamon/assets
-
-  # Install Metacity Theme
-  mkdir -p                                                                            ${themedir}/metacity-1
-  cd ${SRC_DIR}/metacity-1
-  cp -ur {thumbnail.png,*.svg,metacity-theme-3.xml}                                   ${themedir}/metacity-1
-  cp -ur metacity-theme-1${theme}.xml                                                 ${themedir}/metacity-1/metacity-theme-1.xml
-
-  cd ${themedir}/metacity-1
-  ln -s metacity-theme-1.xml metacity-theme-2.xml
-
-  # Install xfwm4 Theme
-  mkdir -p                                                                            ${themedir}/xfwm4
-  cd ${SRC_DIR}/xfwm4
-  cp -ur assets${color}${theme}/*.png                                                 ${themedir}/xfwm4
-
-  if [[ ${color} == '-light' ]] ; then
-    cp -ur themerc${color}                                                            ${themedir}/xfwm4/themerc
-  else
-    cp -ur themerc${theme}                                                            ${themedir}/xfwm4/themerc
-  fi
-
-  # Install openbox Theme
-  mkdir -p                                                                            ${themedir}/openbox-3
-  cd ${SRC_DIR}/openbox-3
-  cp -ur *.xbm                                                                        ${themedir}/openbox-3
-  cp -ur themerc${ELSE_DARK}${theme}                                                  ${themedir}/openbox-3/themerc
-
-  # Install Unity Theme
-  mkdir -p                                                                            ${themedir}/unity
-  cd ${SRC_DIR}
-  cp -ur unity                                                                        ${themedir}
-
-  # Install Plank Theme
-  mkdir -p                                                                            ${themedir}/plank
-  cd ${SRC_DIR}
-  cp -ur plank                                                                        ${themedir}
 }
 
 # Backup and install files related to GDM theme
@@ -304,15 +258,7 @@ while [[ $# -gt 0 ]]; do
       shift
       for theme in "${@}"; do
         case "${theme}" in
-          aliz)
-            themes+=("${THEME_VARIANTS[0]}")
-            shift 1
-            ;;
-          azul)
-            themes+=("${THEME_VARIANTS[1]}")
-            shift 1
-            ;;
-          sea)
+          gruv)
             themes+=("${THEME_VARIANTS[2]}")
             shift 1
             ;;
