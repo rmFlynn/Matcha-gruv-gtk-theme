@@ -1,7 +1,7 @@
 Matcha GruvBox Gtk Theme
 ======
 
-A much edited edition of the matcha gtk theme with (GruvBox)[https://github.com/morhetz/gruvbox] colors and other alterations. I am not much of a CSS person so user at your own risk.
+A much edited edition of the matcha gtk theme with (GruvBox)[https://github.com/morhetz/gruvbox] colors and other alterations. I am not much of a CSS person so use at your own risk.
 
 Matcha is a flat Design theme for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome.
 
