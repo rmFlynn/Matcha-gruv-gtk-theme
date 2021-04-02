@@ -4635,7 +4635,7 @@
          ry="2"
          color="#000000"
          fill="#2b2b2b"
-         stroke="#1a1a1a"
+         stroke="#222b2e"
          stroke-linejoin="round"
          id="rect519" />
     </g>
@@ -4666,7 +4666,7 @@
            ry="13.246"
            color="#000000"
            fill="#2b2b2b"
-           stroke="#1a1a1a"
+           stroke="#222b2e"
            stroke-linejoin="round"
            stroke-width="2.0822"
            id="rect526" />
@@ -4930,7 +4930,7 @@
          ry="2"
          color="#000000"
          fill="#2b2b2b"
-         stroke="#1a1a1a"
+         stroke="#222b2e"
          stroke-linejoin="round"
          id="rect607" />
     </g>
@@ -4962,7 +4962,7 @@
            ry="13.246"
            color="#000000"
            fill="#2b2b2b"
-           stroke="#1a1a1a"
+           stroke="#222b2e"
            stroke-linejoin="round"
            stroke-width="2.0822"
            id="rect614" />

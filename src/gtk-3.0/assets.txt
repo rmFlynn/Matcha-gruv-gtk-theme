@@ -1,8 +1,6 @@
 checkbox-checked
 checkbox-checked-insensitive
 checkbox-unchecked
-checkbox-unchecked-insensitive
-checkbox-mixed
 checkbox-mixed-insensitive
 radio-checked
 radio-checked-insensitive

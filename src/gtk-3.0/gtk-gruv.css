@@ -1631,7 +1631,7 @@ headerbar {
 headerbar:backdrop {
   transition: 200ms ease-out;
   color: rgba(199, 202, 202, 0.7);
-  background-color: #2f2f2f;
+  background-color: #222222;
 }
 
 headerbar .title {
@@ -1685,7 +1685,7 @@ headerbar.selection-mode .selection-menu .arrow {
 }
 
 .maximized headerbar:backdrop {
-  background-color: #2f2f2f;
+  background-color: #222222;
 }
 
 headerbar.default-decoration {
@@ -2270,7 +2270,7 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
 
 .titlebar:not(headerbar) > separator:backdrop {
   transition: 200ms ease-out;
-  background-image: linear-gradient(to bottom, #2f2f2f, #2f2f2f);
+  background-image: linear-gradient(to bottom, #222222, #222222);
   box-shadow: none;
 }
 
@@ -6738,7 +6738,7 @@ window.background.csd > box.vertical > stack > box.horizontal > revealer > stack
 }
 
 window#ValaPanel.background {
-  background-color: #1b2224;
+  background-color: #222222;
   border: none;
   color: #c7caca;
 }
@@ -7313,7 +7313,7 @@ filechooser placessidebar.sidebar scrollbar trough,
 @define-color wm_title alpha(#c7caca, 0.8);
 @define-color wm_unfocused_title alpha(#c7caca, 0.5);
 @define-color wm_bg #222222;
-@define-color wm_bg_unfocused #2f2f2f;
+@define-color wm_bg_unfocused #222222;
 @define-color wm_highlight #2a2a2a;
 @define-color wm_shadow alpha(black, 0.35);
 @define-color wm_button_close_bg #f46067;
@@ -7329,7 +7329,7 @@ filechooser placessidebar.sidebar scrollbar trough,
 @define-color wm_icon_active_bg #ffffff;
 @define-color budgie_tasklist_indicator_color #478487;
 @define-color budgie_tasklist_indicator_color_active #478487;
-@define-color budgie_tasklist_indicator_color_active_window #335759;
+@define-color budgie_tasklist_indicator_color_active_window #365759;
 @define-color budgie_tasklist_indicator_color_attention #F27835;
 @define-color STRAWBERRY_100 #FF9262;
 @define-color STRAWBERRY_300 #FF793E;

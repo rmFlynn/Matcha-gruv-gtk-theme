@@ -17,10 +17,10 @@ $selected_fg_color: #ffffff;
 $selected_bg_color: #2eb398;
 @if $color=='gruv' { $selected_bg_color: #478487; }
 $alt_selected_bg_color: lighten($selected_bg_color, 6%);
-$selected_borders_color: darken($selected_bg_color, 20%);
+$selected_borders_color: $selected_bg_color;
 $borders_color: if($variant =='light', rgba(black, 0.15), rgba(black, 0.25));
 $disable_borders_color: if($variant == 'light', rgba(black, 0.08), rgba(black, 0.15));
-$solid_borders_color: if($variant == 'light', darken($bg_color, 15%), darken($bg_color, 3%));
+$solid_borders_color: if($variant == 'light', darken($bg_color, 15%), $bg_color);
 $highlight: if($variant =='light', rgba(white, 0.13), rgba(white, 0.10));
 
 $link_color: if($variant == 'light', darken($selected_bg_color, 10%),
@@ -56,11 +56,11 @@ $drop_target_color: #F08437;
 $insensitive_fg_color: if($variant == 'light', rgba($fg_color, 0.55), rgba($fg_color, 0.45));
 $insensitive_bg_color: if($variant == 'light', mix($bg_color, $base_color, 40%), lighten($bg_color, 2%));
 
-$header_bg: #1b2224;
+$header_bg: #262626;
 @if $header=='light' { $header_bg: #f2f2f2; }
-@if $color=='gruv' and $header == 'dark' { $header_bg: if($variant =='light', #222222, darken(#222222, 3%)); }
+@if $color=='gruv' and $header == 'dark' { $header_bg: if($variant =='light', #222222, $header_bg); }
 
-$header_bg_backdrop: if($header == 'light', lighten($header_bg, 6%), lighten($header_bg, 5%));
+$header_bg_backdrop: if($header == 'light', lighten($header_bg, 6%), $header_bg);
 $header_border: if($header == 'light', darken($header_bg, 7%), darken($header_bg, 4%));
 $header_fg: if($header =='light', $fg_color, mix($selected_bg_color, #cecece, 5%));
 
@@ -83,7 +83,7 @@ $osd_insensitive_bg_color: rgba(lighten($osd_bg_color, 6%), 0.45);
 $osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 30%);
 
 $panel_bg: #1b2224;
-@if $color=='gruv' { $panel_bg: #1b2224; }
+@if $color=='gruv' { $panel_bg: #222222; }
 $panel_fg: mix($selected_bg_color, #cecece, 5%);
 
 $entry_bg: if($variant == 'light', $base_color, lighten($base_color, 0%));
